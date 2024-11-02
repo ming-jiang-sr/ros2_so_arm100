@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="ros2_control" params="ros2_control_hardware_type">
+    <ros2_control name="SO-ARM100" type="system">
+      <hardware>
+        <xacro:if value="${ros2_control_hardware_type == 'mock_components'}">
+          <plugin>fake_components/GenericSystem</plugin>
+        </xacro:if>
+        <xacro:if value="${ros2_control_hardware_type == 'real'}">
+          <plugin>feetech_hardware_interface/FeetechHardwareInterface</plugin>
+          <param name="usb_port">/dev/LeRobotLeader</param>
+          <param name="baud_rate">1000000</param>
+        </xacro:if>
+      </hardware>
+      <joint name="shoulder_pan_joint">
+        <param name="initial_position">0.0</param>
+        <param name="id">1</param>
+        <command_interface name="position" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+      <joint name="shoulder_lift_joint">
+        <param name="id">2</param>
+        <param name="initial_position">0.0</param>
+        <command_interface name="position" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+      <joint name="elbow_joint">
+        <param name="id">3</param>
+        <param name="initial_position">0.0</param>
+        <command_interface name="position" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+      <joint name="wrist_pitch_joint">
+        <param name="id">4</param>
+        <param name="initial_position">0.0</param>
+        <command_interface name="position" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+      <joint name="wrist_roll_joint">
+        <param name="id">5</param>
+        <param name="initial_position">0.0</param>
+        <command_interface name="position" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+      <joint name="jaw_joint">
+        <param name="id">6</param>
+        <param name="initial_position">0.0</param>
+        <command_interface name="position" />
+        <state_interface name="position" />
+        <state_interface name="velocity" />
+      </joint>
+    </ros2_control>
+  </xacro:macro>
+</robot>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>so_arm100_description</name>
+  <version>0.0.0</version>
+  <description>
+    ROS 2 description for https://github.com/TheRobotStudio/SO-ARM100
+  </description>
+  <maintainer email="jafar.uruc@gmail.com">Jafar Uruc</maintainer>
+  <license>BSD</license>
+  <exec_depend>xacro</exec_depend>
+  <!-- TODO: Update dependencies -->
+  <exec_depend>rqt_joint_trajectory_controller</exec_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
