@@ -1,9 +1,13 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="so_100arm">
   <xacro:arg name="ros2_control_hardware_type" default="mock_components" />
 
   <xacro:include filename="so_arm100.urdf" />
-  <xacro:include filename="$(find so_arm100_description)/control/so_arm100.ros2_control.xacro" />
+  <xacro:include
+    filename="$(find so_arm100_description)/control/so_arm100.ros2_control.xacro"
+  />
 
-  <xacro:ros2_control ros2_control_hardware_type="$(arg ros2_control_hardware_type)" />
+  <xacro:ros2_control
+    ros2_control_hardware_type="$(arg ros2_control_hardware_type)"
+  />
 </robot>
