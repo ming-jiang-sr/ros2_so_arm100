@@ -13,7 +13,7 @@ https://github.com/user-attachments/assets/36ccaca0-82dd-4206-a4dd-953867e89a20
 To launch the controllers run:
 
 ```bash
-ros2 launch so_arm100_description controllers_bringup.launch.py
+ros2 launch so_arm100_description controllers_bringup.launch.py hardware_type:=mock_components # hardware_type:=real for running with hardware
 ```
 
 To launch rviz run:

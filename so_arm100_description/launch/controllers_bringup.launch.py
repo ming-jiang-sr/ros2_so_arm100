@@ -1,6 +1,8 @@
 from ament_index_python.packages import get_package_share_path
 from launch import LaunchDescription
 from launch_ros.actions import Node
+from launch.actions import DeclareLaunchArgument
+from moveitpy_simple.moveit_configs_utils.launch_utils import launch_configurations
 from moveitpy_simple.moveit_configs_utils.file_loaders import load_xacro
 
 startup_controllers = [
@@ -10,13 +12,26 @@ startup_controllers = [
 ]
 
 
-def generate_launch_description():
+@launch_configurations
+def make_robot_state_publisher_node(args):
     robot_description = load_xacro(
         get_package_share_path("so_arm100_description")
         / "urdf"
         / "so_arm100.urdf.xacro",
-        mappings={"ros2_control_hardware_type": "mock_components"},
+        mappings={"ros2_control_hardware_type": args.hardware_type},
     )
+    return [
+        Node(
+            package="robot_state_publisher",
+            executable="robot_state_publisher",
+            parameters=[
+                {"robot_description": robot_description},
+            ],
+        )
+    ]
+
+
+def generate_launch_description():
     ros2_controllers_file = (
         get_package_share_path("so_arm100_description")
         / "control"
@@ -25,6 +40,7 @@ def generate_launch_description():
 
     return LaunchDescription(
         [
+            DeclareLaunchArgument("hardware_type", default_value="mock_components"),
             Node(
                 package="controller_manager",
                 executable="ros2_control_node",
@@ -35,13 +51,7 @@ def generate_launch_description():
                 # Colorful output
                 emulate_tty=True,
             ),
-            Node(
-                package="robot_state_publisher",
-                executable="robot_state_publisher",
-                parameters=[
-                    {"robot_description": robot_description},
-                ],
-            ),
+            *make_robot_state_publisher_node(),
         ]
         + [
             Node(
