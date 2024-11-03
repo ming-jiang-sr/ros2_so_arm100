@@ -2,6 +2,12 @@
 
 Description: ROS 2 description package for https://github.com/TheRobotStudio/SO-ARM100
 
+https://github.com/user-attachments/assets/5655b956-5536-4143-9707-17cad5d1cbc8
+
+
+https://github.com/user-attachments/assets/36ccaca0-82dd-4206-a4dd-953867e89a20
+
+
 ## Usage
 
 To launch the controllers run:
