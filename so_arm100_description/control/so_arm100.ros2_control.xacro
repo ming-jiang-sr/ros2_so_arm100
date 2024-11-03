@@ -7,7 +7,7 @@
           <plugin>fake_components/GenericSystem</plugin>
         </xacro:if>
         <xacro:if value="${ros2_control_hardware_type == 'real'}">
-          <plugin>feetech_hardware_interface/FeetechHardwareInterface</plugin>
+          <plugin>feetech_ros2_driver/FeetechHardwareInterface</plugin>
           <param name="usb_port">/dev/LeRobotFollower</param>
         </xacro:if>
       </hardware>
