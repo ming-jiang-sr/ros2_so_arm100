@@ -4,7 +4,7 @@
     <ros2_control name="SO-ARM100" type="system">
       <hardware>
         <xacro:if value="${ros2_control_hardware_type == 'mock_components'}">
-          <plugin>fake_components/GenericSystem</plugin>
+          <plugin>mock_components/GenericSystem</plugin>
         </xacro:if>
         <xacro:if value="${ros2_control_hardware_type == 'real'}">
           <plugin>feetech_ros2_driver/FeetechHardwareInterface</plugin>
