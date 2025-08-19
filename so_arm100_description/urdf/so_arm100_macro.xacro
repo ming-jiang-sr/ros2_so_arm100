@@ -41,7 +41,7 @@ changes:
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://so_arm100_description/meshes/Base.STL" />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/base_motor_holder_so101_v1.stl" />
         </geometry>
         <material name="">
           <color
@@ -52,7 +52,7 @@ changes:
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://so_arm100_description/meshes/Base.STL" />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/base_motor_holder_so101_v1.stl" />
         </geometry>
       </collision>
     </link>
@@ -73,33 +73,38 @@ changes:
         />
       </inertial>
       <visual>
+        <origin xyz="-0.0303992 0.000422241 -0.0417" rpy="1.5708 1.5708 0" />
+        <geometry>
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/sts3215_03a_v1.stl" />
+        </geometry>
+        <material name="sts3215"/>
+      </visual>
+      <visual>
+        <origin xyz="-0.0675992 -0.000177759 0.0158499" rpy="1.5708 -1.5708 0" />
+        <geometry>
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/motor_holder_so101_base_v1.stl" />
+        </geometry>
+        <material name="3d_printed"/>
+      </visual>
+      <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Rotation_Pitch.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/rotation_pitch_so101_v1.stl" />
         </geometry>
-        <material name="">
-          <color
-            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"
-          />
-        </material>
       </visual>
       <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="-0.0303992 0.000422241 -0.0417" rpy="1.5708 1.5708 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Rotation_Pitch.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/sts3215_03a_v1.stl" />
         </geometry>
       </collision>
     </link>
     <joint name="${prefix}shoulder_pan_joint" type="revolute">
-      <origin xyz="0 -0.0452 0.0165" rpy="1.5708 0 0" />
+      <origin xyz="0.0388353 0 0.0459" rpy="0 0 0" />
       <parent link="${prefix}base" />
       <child link="${prefix}shoulder_link" />
-      <axis xyz="0 -1 0" />
-      <limit lower="-2.0" upper="2.0" effort="1" velocity="1" />
+      <axis xyz="0 0 1" />
+      <limit effort="10" velocity="10" lower="-1.91986" upper="1.91986" />
     </joint>
     <link name="${prefix}upper_arm_link">
       <inertial>
@@ -120,31 +125,29 @@ changes:
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Upper_Arm.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/sts3215_03a_v1.stl" />
         </geometry>
-        <material name="">
-          <color
-            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"
-          />
-        </material>
+        <material name="sts3215"/>
+      </visual>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/upper_arm_so101_v1.stl" />
+        </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Upper_Arm.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/upper_arm_so101_v1.stl" />
         </geometry>
       </collision>
     </link>
     <joint name="${prefix}shoulder_lift_joint" type="revolute">
-      <origin xyz="0 0.1025 0.0306" rpy="0 0 0" />
+      <origin xyz="0 0 0.0624" rpy="3.14159 0 0" />
       <parent link="${prefix}shoulder_link" />
       <child link="${prefix}upper_arm_link" />
-      <axis xyz="1 0 0" />
-      <limit lower="-1.75" upper="1.75" effort="1" velocity="1" />
+      <axis xyz="0 0 1" />
+      <limit effort="10" velocity="10" lower="-1.74533" upper="1.74533" />
     </joint>
     <link name="${prefix}forearm_link">
       <inertial>
@@ -165,31 +168,36 @@ changes:
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Lower_Arm.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/under_arm_so101_v1.stl" />
         </geometry>
-        <material name="">
-          <color
-            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"
-          />
-        </material>
+        <material name="3d_printed"/>
+      </visual>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/motor_holder_so101_wrist_v1.stl" />
+        </geometry>
+      </visual>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/sts3215_03a_v1.stl" />
+        </geometry>
+        <material name="sts3215"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Lower_Arm.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/under_arm_so101_v1.stl" />
         </geometry>
       </collision>
     </link>
     <joint name="${prefix}elbow_joint" type="revolute">
-      <origin xyz="0 0.11257 0.028" rpy="0 0 0" />
+      <origin xyz="-0.0303992 -0.0182778 -0.0542" rpy="-1.5708 -1.5708 0" />
       <parent link="${prefix}upper_arm_link" />
       <child link="${prefix}forearm_link" />
-      <axis xyz="1 0 0" />
-      <limit lower="-1.75" upper="1.57" effort="1" velocity="1" />
+      <axis xyz="0 0 1" />
+      <limit effort="10" velocity="10" lower="-1.69" upper="1.69" />
     </joint>
     <link name="${prefix}wrist_1_link">
       <inertial>
@@ -210,31 +218,29 @@ changes:
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Wrist_Pitch_Roll.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/sts3215_03a_no_horn_v1.stl" />
         </geometry>
-        <material name="">
-          <color
-            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"
-          />
-        </material>
+        <material name="sts3215"/>
+      </visual>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/wrist_roll_pitch_so101_v2.stl" />
+        </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Wrist_Pitch_Roll.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/sts3215_03a_no_horn_v1.stl" />
         </geometry>
       </collision>
     </link>
     <joint name="${prefix}wrist_pitch_joint" type="revolute">
-      <origin xyz="0 0.0052 0.1349" rpy="0 0 0" />
+      <origin xyz="-0.1224 0.0052 0.0187" rpy="-3.14159 0 -3.14159" />
       <parent link="${prefix}forearm_link" />
       <child link="${prefix}wrist_1_link" />
-      <axis xyz="1 0 0" />
-      <limit lower="-3.5" upper="0.2" effort="1" velocity="1" />
+      <axis xyz="0 0 1" />
+      <limit effort="10" velocity="10" lower="-1.65806" upper="1.65806" />
     </joint>
     <link name="${prefix}wrist_2_link">
       <inertial>
@@ -255,31 +261,29 @@ changes:
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Fixed_Jaw.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/sts3215_03a_v1.stl" />
         </geometry>
-        <material name="">
-          <color
-            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"
-          />
-        </material>
+        <material name="sts3215"/>
+      </visual>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/wrist_roll_follower_so101_v1.stl" />
+        </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Fixed_Jaw.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/sts3215_03a_v1.stl" />
         </geometry>
       </collision>
     </link>
     <joint name="${prefix}wrist_roll_joint" type="revolute">
-      <origin xyz="0 -0.0601 0" rpy="0 0 0" />
+      <origin xyz="5.55112e-17 -0.0611 0.0181" rpy="1.5708 0.0486795 3.14159" />
       <parent link="${prefix}wrist_1_link" />
       <child link="${prefix}wrist_2_link" />
-      <axis xyz="0 1 0" />
-      <limit lower="-1.0" upper="4.0" effort="1" velocity="1" />
+      <axis xyz="0 0 1" />
+      <limit effort="10" velocity="10" lower="-2.74385" upper="2.84121" />
     </joint>
     <link name="${prefix}jaw_link">
       <inertial>
@@ -300,31 +304,39 @@ changes:
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Moving_Jaw.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/moving_jaw_so101_v1.stl" />
         </geometry>
-        <material name="">
-          <color
-            rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"
-          />
-        </material>
+        <material name="3d_printed"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh
-            filename="package://so_arm100_description/meshes/Moving_Jaw.STL"
-          />
+          <mesh filename="package://so_arm100_description/SO-ARM101-Assets/moving_jaw_so101_v1.stl" />
         </geometry>
       </collision>
     </link>
+    <!-- Gripper frame (dummy link + fixed joint) -->
+    <link name="${prefix}gripper_frame_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1e-9"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+      </inertial>
+    </link>
+
+    <joint name="${prefix}gripper_frame_joint" type="fixed">
+      <origin xyz="-0.0079 -0.000218121 -0.0981274" rpy="0 3.14159 0"/>
+      <parent link="${prefix}wrist_2_link"/>
+      <child link="${prefix}gripper_frame_link"/>
+      <axis xyz="0 0 0"/>
+    </joint>
+
     <joint name="${prefix}jaw_joint" type="revolute">
-      <origin xyz="-0.0202 -0.0244 0" rpy="3.1416 0 3.1416" />
+      <origin xyz="0.0202 0.0188 -0.0234" rpy="1.5708 -5.24284e-08 -1.41553e-15"/>
       <parent link="${prefix}wrist_2_link" />
       <child link="${prefix}jaw_link" />
       <axis xyz="0 0 1" />
-      <limit lower="-0.22" upper="2.0" effort="1" velocity="1" />
+      <limit effort="10" velocity="10" lower="-0.174533" upper="1.74533" />
     </joint>
   </xacro:macro>
 </robot>
