@@ -15,6 +15,18 @@
 | gripper_frame_link   | (added)               | Added to match SO101                   |
 | jaw_link             | jaw_link              | End effector                           |
 
+### Joint Name Mapping:
+
+| SO101 Joint Name         | SO100 Joint Name          | Type     | Notes                                  |
+|--------------------------|---------------------------|----------|----------------------------------------|
+| shoulder_pan_joint       | shoulder_pan_joint        | revolute | Base rotation joint                    |
+| shoulder_lift_joint      | shoulder_lift_joint       | revolute | Shoulder lift/pitch joint              |
+| elbow_joint              | elbow_joint               | revolute | Elbow joint                            |
+| wrist_pitch_joint        | wrist_pitch_joint         | revolute | Wrist pitch joint                      |
+| wrist_roll_joint         | wrist_roll_joint          | revolute | Wrist roll joint                       |
+| jaw_joint                | jaw_joint                 | revolute | Gripper jaw joint                      |
+| (fixed)                 | gripper_frame_joint       | fixed    | Added to match SO101's gripper frame   |
+
 ## 2. Mesh File Updates
 
 ### Mesh File Mapping:
