@@ -18,56 +18,79 @@
         <param name="initial_position">0.0</param>
         <param name="id">1</param>
         <param name="p_cofficient">8</param>
-        <param name="offset">2048</param>
+        <param name="offset">2732</param>
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
+        <param name="min_position">-2.62924</param>
+        <param name="max_position">0.63507</param>
+        <param name="max_velocity">10.0</param>
+        <param name="max_effort">10.0</param>
       </joint>
       <joint name="${prefix}shoulder_lift_joint">
         <param name="id">2</param>
         <param name="p_cofficient">16</param>
-        <param name="offset">2125</param>
+        <param name="offset">1036</param>
         <param name="initial_position">0.0</param>
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
+        <param name="min_position">0.55223</param>
+        <param name="max_position">2.80105</param>
+        <param name="max_velocity">10.0</param>
+        <param name="max_effort">10.0</param>
       </joint>
       <joint name="${prefix}elbow_joint">
         <param name="id">3</param>
-        <param name="offset">2080</param>
+        <param name="offset">2800</param>
         <param name="p_cofficient">16</param>
         <param name="initial_position">0.0</param>
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
-        <param name="min_position">-1.69</param>
+        <param name="min_position">-3.12165</param>
+        <param name="max_position">0.35742</param>
+        <param name="max_velocity">10.0</param>
+        <param name="max_effort">10.0</param>
       </joint>
       <joint name="${prefix}wrist_pitch_joint">
         <param name="id">4</param>
-        <param name="offset">3110</param>
+        <param name="offset">3250</param>
         <param name="p_cofficient">16</param>
         <param name="initial_position">0.0</param>
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
+        <param name="min_position">-4.67711</param>
+        <param name="max_position">-1.13668</param>
+        <param name="max_velocity">10.0</param>
+        <param name="max_effort">10.0</param>
       </joint>
       <joint name="${prefix}wrist_roll_joint">
         <param name="id">5</param>
-        <param name="offset">1024</param>
+        <param name="offset">1241</param>
         <param name="p_cofficient">16</param>
         <param name="initial_position">0.0</param>
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
+        <param name="min_position">-1.65823</param>
+        <param name="max_position">4.34884</param>
+        <param name="max_velocity">10.0</param>
+        <param name="max_effort">10.0</param>
       </joint>
       <joint name="${prefix}jaw_joint">
         <param name="id">6</param>
-        <param name="offset">2070</param>
+        <param name="offset">2029</param>
         <param name="p_cofficient">16</param>
         <param name="initial_position">0.0</param>
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
+        <param name="min_position">-0.7992</param>
+        <param name="max_position">1.68124</param>
+        <param name="max_velocity">10.0</param>
+        <param name="max_effort">10.0</param>
       </joint>
     </ros2_control>
   </xacro:macro>
