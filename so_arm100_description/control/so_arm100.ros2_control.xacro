@@ -22,10 +22,6 @@
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
-        <param name="min_position">-2.62924</param>
-        <param name="max_position">0.63507</param>
-        <param name="max_velocity">10.0</param>
-        <param name="max_effort">10.0</param>
       </joint>
       <joint name="${prefix}shoulder_lift_joint">
         <param name="id">2</param>
@@ -35,10 +31,6 @@
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
-        <param name="min_position">0.55223</param>
-        <param name="max_position">2.80105</param>
-        <param name="max_velocity">10.0</param>
-        <param name="max_effort">10.0</param>
       </joint>
       <joint name="${prefix}elbow_joint">
         <param name="id">3</param>
@@ -48,10 +40,6 @@
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
-        <param name="min_position">-3.12165</param>
-        <param name="max_position">0.35742</param>
-        <param name="max_velocity">10.0</param>
-        <param name="max_effort">10.0</param>
       </joint>
       <joint name="${prefix}wrist_pitch_joint">
         <param name="id">4</param>
@@ -61,10 +49,6 @@
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
-        <param name="min_position">-4.67711</param>
-        <param name="max_position">-1.13668</param>
-        <param name="max_velocity">10.0</param>
-        <param name="max_effort">10.0</param>
       </joint>
       <joint name="${prefix}wrist_roll_joint">
         <param name="id">5</param>
@@ -74,10 +58,6 @@
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
-        <param name="min_position">-1.65823</param>
-        <param name="max_position">4.34884</param>
-        <param name="max_velocity">10.0</param>
-        <param name="max_effort">10.0</param>
       </joint>
       <joint name="${prefix}jaw_joint">
         <param name="id">6</param>
@@ -87,10 +67,6 @@
         <command_interface name="position" />
         <state_interface name="position" />
         <state_interface name="velocity" />
-        <param name="min_position">-0.7992</param>
-        <param name="max_position">1.68124</param>
-        <param name="max_velocity">10.0</param>
-        <param name="max_effort">10.0</param>
       </joint>
     </ros2_control>
   </xacro:macro>
