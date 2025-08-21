@@ -11,9 +11,9 @@
   <xacro:macro name="so_arm100" params="prefix">
     <link name="${prefix}base">
       <inertial>
-        <origin xyz="0.020739 0.00204287 0.065966" rpy="0 0 0" />
+        <origin xyz="0.0137179 -5.19711e-05 0.0334843" rpy="0 0 0" />
         <mass value="0.147" />
-        <inertia ixx="0.000136117" ixy="4.59787e-07" ixz="9.75275e-08" iyy="0.000114686" iyz="-4.97151e-06" izz="0.000130364" />
+        <inertia ixx="0.000114686" ixy="-4.59787e-07" ixz="4.97151e-06" iyy="0.000136117" iyz="9.75275e-08" izz="0.000130364" />
       </inertial>
       <visual>
         <origin xyz="0.0206915 0.0221255 0.0300817" rpy="1.5708 -1.23909e-16 2.33147e-15" />
