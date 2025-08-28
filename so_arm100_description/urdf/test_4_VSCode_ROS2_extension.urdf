@@ -17,53 +17,53 @@
       <inertia ixx="0.000114686" ixy="-4.59787e-07" ixz="4.97151e-06" iyy="0.000136117" iyz="9.75275e-08" izz="0.000130364"/>
     </inertial>
     <visual>
-      <origin rpy="1.5708 -1.23909e-16 2.33147e-15" xyz="0.0206915 0.0221255 0.0300817"/>
+  <origin xyz="-0.00636471 -9.94414e-05 -0.0024" rpy="1.5708 -1.67685e-15 1.5708"/>
       <geometry>
         <mesh filename="package://so_arm100_description/SO-ARM101-Assets/base_motor_holder_so101_v1.stl"/>
       </geometry>
       <material name="3d_printed"/>
     </visual>
     <collision>
-      <origin rpy="1.5708 -1.23909e-16 2.33147e-15" xyz="0.0206915 0.0221255 0.0300817"/>
+  <origin xyz="-0.00636471 -9.94414e-05 -0.0024" rpy="1.5708 -1.67685e-15 1.5708"/>
       <geometry>
         <mesh filename="package://so_arm100_description/SO-ARM101-Assets/base_motor_holder_so101_v1.stl"/>
       </geometry>
     </collision>
     <visual>
-      <origin rpy="1.5708 -0 0" xyz="0.0207909 0.0221255 0.0300817"/>
+  <origin xyz="-0.00636471 -8.97657e-09 -0.0024" rpy="1.5708 -2.78073e-29 1.5708"/>
       <geometry>
         <mesh filename="package://so_arm100_description/SO-ARM101-Assets/base_so101_v2.stl"/>
       </geometry>
       <material name="3d_printed"/>
     </visual>
     <collision>
-      <origin rpy="1.5708 -0 0" xyz="0.0207909 0.0221255 0.0300817"/>
+  <origin xyz="-0.00636471 -8.97657e-09 -0.0024" rpy="1.5708 -2.78073e-29 1.5708"/>
       <geometry>
         <mesh filename="package://so_arm100_description/SO-ARM101-Assets/base_so101_v2.stl"/>
       </geometry>
     </collision>
     <visual>
-      <origin rpy="-2.20282e-15 2.77556e-17 -1.5708" xyz="0.0207909 -0.0105745 0.0761817"/>
+  <origin xyz="0.0263353 -8.97657e-09 0.0437" rpy="-8.21148e-16 7.84513e-18 1.249e-15"/>
       <geometry>
         <mesh filename="package://so_arm100_description/SO-ARM101-Assets/sts3215_03a_v1.stl"/>
       </geometry>
       <material name="sts3215"/>
     </visual>
     <collision>
-      <origin rpy="-2.20282e-15 2.77556e-17 -1.5708" xyz="0.0207909 -0.0105745 0.0761817"/>
+  <origin xyz="0.0263353 -8.97657e-09 0.0437" rpy="-8.21148e-16 7.84513e-18 1.249e-15"/>
       <geometry>
         <mesh filename="package://so_arm100_description/SO-ARM101-Assets/sts3215_03a_v1.stl"/>
       </geometry>
     </collision>
     <visual>
-      <origin rpy="1.5708 -1.21716e-14 2.33147e-15" xyz="0.0205915 0.0467435 0.0798817"/>
+  <origin xyz="-0.0309827 -0.000199441 0.0474" rpy="1.5708 -1.35493e-14 1.5708"/>
       <geometry>
         <mesh filename="package://so_arm100_description/SO-ARM101-Assets/waveshare_mounting_plate_so101_v2.stl"/>
       </geometry>
       <material name="3d_printed"/>
     </visual>
     <collision>
-      <origin rpy="1.5708 -1.21716e-14 2.33147e-15" xyz="0.0205915 0.0467435 0.0798817"/>
+  <origin xyz="-0.0309827 -0.000199441 0.0474" rpy="1.5708 -1.35493e-14 1.5708"/>
       <geometry>
         <mesh filename="package://so_arm100_description/SO-ARM101-Assets/waveshare_mounting_plate_so101_v2.stl"/>
       </geometry>
