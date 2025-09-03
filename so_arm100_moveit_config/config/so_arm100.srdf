@@ -31,18 +31,25 @@
     <joint name="wrist_pitch_joint" value="0" />
     <joint name="wrist_roll_joint" value="0" />
   </group_state>
-  <group_state name="extended" group="manipulator">
-    <joint name="elbow_joint" value="-1.57" />
-    <joint name="shoulder_lift_joint" value="1.57" />
+    <group_state name="MJ_test_wrist" group="manipulator">
+    <joint name="elbow_joint" value="0" />
+    <joint name="shoulder_lift_joint" value="0" />
     <joint name="shoulder_pan_joint" value="0" />
-    <joint name="wrist_pitch_joint" value="-1.57" />
-    <joint name="wrist_roll_joint" value="1.57" />
+    <joint name="wrist_pitch_joint" value="0" />
+    <joint name="wrist_roll_joint" value="0.6" />
+  </group_state>
+  <group_state name="extended" group="manipulator">
+    <joint name="elbow_joint" value="-1.5" />
+    <joint name="shoulder_lift_joint" value="1.5" />
+    <joint name="shoulder_pan_joint" value="0" />
+    <joint name="wrist_pitch_joint" value="-1.0" />
+    <joint name="wrist_roll_joint" value="1.5" />
   </group_state>
   <group_state name="rest" group="manipulator">
     <joint name="elbow_joint" value="1.57" />
-    <joint name="shoulder_lift_joint" value="-1.75" />
+    <joint name="shoulder_lift_joint" value="-1.60" />
     <joint name="shoulder_pan_joint" value="0" />
-    <joint name="wrist_pitch_joint" value="-0.35" />
+    <joint name="wrist_pitch_joint" value="0.35" />
     <joint name="wrist_roll_joint" value="1.57" />
   </group_state>
   <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
